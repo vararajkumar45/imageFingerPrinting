@@ -1,0 +1,65 @@
+.form-control {
+    width: 50%;
+}
+
+.row {
+    align-self: center !important;
+    justify-content: center !important;
+    width: 100vw;
+}
+
+.uploadDiv {
+    border: 2px dotted #fff;
+    padding: 40px;
+    margin-top: 50px;
+}
+
+#imageError, #imageTypeError {
+    color: red;
+    font-size: 12px;
+    display: none;
+}
+
+.card {
+    border-radius: 8px;
+    height: 400px;
+}
+.card img {
+    height: 80%;
+}
+
+div.wrapper { 
+    position : absolute;
+    z-index: 2;
+    top : 0px;
+    left : 0px;
+    width : 100%;
+    height : 100%;
+    min-width: 80px;
+    min-height: 80px;
+    /* background-color: #37c97b; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #252525;
+}
+div.rect { 
+    position : absolute;
+    width : 70px;
+    height : 70px;
+    border : 2px solid white;
+    border-radius: 5px;
+    transform :rotate(calc(var(--i) * 105deg)) scale(0);
+    animation: scale 1s ease-in-out calc(var(--i) * 0.5s) infinite alternate ;
+    box-shadow: 1px 1px 10px rgba(1, 9, 8, 0.479);
+}
+
+@keyframes scale {
+    from { 
+        transform : scale(0) rotate(calc(var(--i) * 35deg));
+    }to {
+        transform: scale(1) rotate(calc(var(--i) * 35deg));;
+    }
+}
